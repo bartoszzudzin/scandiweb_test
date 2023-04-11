@@ -13,6 +13,7 @@ abstract class Product
     
     abstract public function setValues($sku, $name, $price, $size, $height, $width, $length, $weight);
     abstract public function getInfo();
+    abstract public function addProduct($con, $sku, $name, $price, $productType, $size, $height, $width, $length, $weight);
 }
 
 ?>

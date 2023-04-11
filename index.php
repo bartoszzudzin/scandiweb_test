@@ -13,17 +13,9 @@ if(isset($_GET['sku'])){
     $length = isset($_GET['length']) && !empty($_GET['length']) ? mysqli_real_escape_string($con, $_GET['length']) : 0;
     $weight = isset($_GET['weight']) && !empty($_GET['weight']) ? mysqli_real_escape_string($con, $_GET['weight']) : 0;
 
-    $sql = mysqli_query($con, "SELECT sku FROM products WHERE sku='$sku'LIMIT 1");
+    $class = new $productType();
 
-    $skuMatch = mysqli_num_rows($sql);
-
-    if($skuMatch > 0){
-        echo 'SKU is already in use, try another one - <a href="/add-product.php">Try again</a>';
-        exit();
-    }
-
-    $sql = mysqli_query($con, "INSERT INTO products(sku, name, price, productType, size, height, width, length, weight) 
-    VALUES('$sku', '$name', '$price', '$productType', '$size', '$height', '$width', '$length', '$weight')") or die (mysqli_error($con));
+    $class->addProduct($con, $sku, $name, $price, $productType, $size, $height, $width, $length, $weight);
 
 }
 
@@ -52,11 +44,13 @@ foreach(get_declared_classes() as $class ){
 
 <?php 
 
-if(isset($_POST["please_delete"])){  
+if(isset($_POST["please_delete"])){ 
+    $sku = null;
     if(isset($_POST['delete'])){
         foreach($_POST['delete'] as $SKU){        
              $con->query("DELETE FROM products WHERE sku='".$SKU."'");    
         }
+        header("Location: index.php");
     }
 }
 

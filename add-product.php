@@ -51,7 +51,7 @@
                         </label>
                         
                         <label>Price ($)
-                        <input name="price" type="number" id="price" placeholder="Integer only, no decimals." required>
+                        <input name="price" type="number" step="any" id="price" required>
                         </label>
 
                         <label>Type Switcher
@@ -67,7 +67,7 @@
                     <div id="DVD" class="not">
 
                         <label>Size (MB)
-                        <input name="size" type="integer" id="size" placeholder="Integer only, no decimals.">
+                        <input name="size" type="number" step="any" id="size">
                         </label>
 
                         <p>Please, provide size</p>
@@ -76,20 +76,20 @@
 
                     <div id="Furniture" class="not">
                         <label>Height (CM)
-                        <input name="height" type="integer" id="height" placeholder="Integer only, no decimals.">
+                        <input name="height" type="number" step="any" id="height">
                         </label>
                         <label>Width (CM)
-                        <input name="width" type="integer" id="width" placeholder="Integer only, no decimals.">
+                        <input name="width" type="number" step="any" id="width">
                         </label>
                         <label>Length (CM)
-                        <input name="length" type="integer" id="length" placeholder="Integer only, no decimals.">
+                        <input name="length" type="number" step="any" id="length">
                         </label>
                         <p>Please, provide dimensions</p>
                     </div>
 
                     <div id="Book" class="not">
                         <label>Weight (KG)
-                        <input name="weight" type="integer" id="weight" placeholder="Integer only, no decimals.">
+                        <input name="weight" type="number" step="any" id="weight">
                         </label>
                         <br />
                         <p>Please, provide weight</p>
