@@ -25,7 +25,6 @@ class Furniture extends Product{
 
     public function addProduct($con, $sku, $name, $price, $productType, $size, $height, $width, $length, $weight)
     {
-        if(isset($_GET['sku'])){
             $sql = mysqli_query($con, "SELECT sku FROM products WHERE sku='$sku'LIMIT 1");     
             $skuMatch = mysqli_num_rows($sql);
             if($skuMatch > 0){
@@ -38,7 +37,6 @@ class Furniture extends Product{
                 exit();
             }
         
-        }
     }
 };
 

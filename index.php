@@ -1,5 +1,9 @@
 <?php
 require "scripts/connection.php";
+include_once 'classes/Product.php';
+include_once 'classes/Book.php';
+include_once 'classes/DVD.php';
+include_once 'classes/Furniture.php';
 
 if(isset($_GET['sku'])){
 
@@ -21,10 +25,6 @@ if(isset($_GET['sku'])){
 
 ?>
 <?php
-include_once 'classes/Product.php';
-include_once 'classes/Book.php';
-include_once 'classes/DVD.php';
-include_once 'classes/Furniture.php';
 
 $children = array();
 
