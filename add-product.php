@@ -67,7 +67,7 @@
                     <div id="DVD" class="not">
 
                         <label>Size (MB)
-                        <input name="size" type="number" step="any" id="size">
+                        <input name="size" type="text" id="size">
                         </label>
 
                         <p>Please, provide size</p>
@@ -76,20 +76,20 @@
 
                     <div id="Furniture" class="not">
                         <label>Height (CM)
-                        <input name="height" type="number" step="any" id="height">
+                        <input name="height" type="text" id="height">
                         </label>
                         <label>Width (CM)
-                        <input name="width" type="number" step="any" id="width">
+                        <input name="width" type="text" id="width">
                         </label>
                         <label>Length (CM)
-                        <input name="length" type="number" step="any" id="length">
+                        <input name="length" type="text" id="length">
                         </label>
                         <p>Please, provide dimensions</p>
                     </div>
 
                     <div id="Book" class="not">
                         <label>Weight (KG)
-                        <input name="weight" type="number" step="any" id="weight">
+                        <input name="weight" type="text" id="weight">
                         </label>
                         <br />
                         <p>Please, provide weight</p>
